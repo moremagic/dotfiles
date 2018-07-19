@@ -11,6 +11,13 @@ Plugin 'VundleVim/Vundle.vim'
 " 導入したいプラグインを以下に列挙
 " Plugin '[Github Author]/[Github repo]' の形式で記入
 Plugin 'airblade/vim-gitgutter'
+Plugin 'kovisoft/slimv'
+
+" +++ slimv で roswell を使用する設定 +++
+let g:slimv_swank_cmd = "!ros -e '(ql:quickload :swank) (swank:create-server)' wait &"
+let g:slimv_lisp = 'ros run'
+let g:slimv_impl = 'sbcl'
+" +++++++++++++++++++++++++++++++++++++++
 
 call vundle#end()
 filetype plugin indent on
