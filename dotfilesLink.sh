@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# vim plugin manager [Vundle] install
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 DOT_FILES=(.bashrc .bash_profile .vimrc .config/git)
 for file in ${DOT_FILES[@]}
 do
