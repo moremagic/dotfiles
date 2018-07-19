@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DOT_FILES=(.bashrc .bash_profile .vimrc .config/git)
 for file in ${DOT_FILES[@]}
