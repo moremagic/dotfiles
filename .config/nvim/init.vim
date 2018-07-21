@@ -1,7 +1,5 @@
 " ==============================================
-" vim plugin[Vundle] setup
-
-
+" vim plugin [dein] setup
 let s:dein_path = expand('~/.vim/dein')
 
 if &compatible
