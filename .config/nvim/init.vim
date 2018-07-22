@@ -14,6 +14,16 @@ if dein#load_state(s:dein_path)
   call dein#add('airblade/vim-gitgutter')
   call dein#add('kovisoft/slimv')
 
+  " +++ deplete.nvm +++
+  call dein#add('shougo/deoplete.nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+
+  " +++ vim-terraform +++
+  call dein#add('hashivim/vim-terraform')
+  call dein#add('vim-syntastic/syntastic')
+  call dein#add('juliosueiras/vim-terraform-completion')
+
   call dein#end()
   call dein#save_state()
 endif
@@ -25,12 +35,25 @@ endif
 filetype plugin indent on
 syntax enable
 
-
 " +++ slimv で roswell を使用する設定 +++
 let g:slimv_swank_cmd = "!ros -s swank -e '(swank:create-server)' wait &"
 let g:slimv_lisp = 'ros run'
 let g:slimv_impl = 'sbcl'
-" +++++++++++++++++++++++++++++++++++++++
+
+" +++ deplete +++
+let g:deoplete#enable_at_startup = 1
+
+" +++ terraform +++
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
+let g:terraform_fmt_on_save = 1
+
+" +++ syntastic +++
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " ==============================================
 
