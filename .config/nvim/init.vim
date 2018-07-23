@@ -1,10 +1,13 @@
-" ==============================================
-" vim plugin [dein] setup
-let s:dein_path = expand('~/.vim/dein')
-
 if &compatible
   set nocompatible
 endif
+
+syntax on
+filetype plugin indent on
+
+" ==============================================
+" vim plugin [dein] setup
+let s:dein_path = expand('~/.vim/dein')
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state(s:dein_path)
@@ -32,9 +35,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-filetype plugin indent on
-syntax enable
-
 " +++ slimv で roswell を使用する設定 +++
 let g:slimv_swank_cmd = "!ros -s swank -e '(swank:create-server)' wait &"
 let g:slimv_lisp = 'ros run'
@@ -42,6 +42,9 @@ let g:slimv_impl = 'sbcl'
 
 " +++ deplete +++
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
+call deoplete#initialize()
 
 " +++ terraform +++
 let g:terraform_align=1
@@ -126,7 +129,7 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 構文ハイライト有効
-syntax enable
+" syntax enable
 " カラースキーム
 colorscheme peachpuff
 " ダーク系のカラースキームを使う
