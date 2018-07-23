@@ -132,3 +132,6 @@ colorscheme peachpuff
 " ダーク系のカラースキームを使う
 set background=dark
 
+" バックスペースを有効
+set backspace=indent,eol,start
+
