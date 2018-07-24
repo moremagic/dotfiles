@@ -21,5 +21,5 @@ ros install sbcl
 ros install sbcl-bin
 ros install ccl-bin
 ros use sbcl/1.4.8
-ros -e '(ql:quickload :swank)'
+ros install slim
 
