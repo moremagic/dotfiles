@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install -y gcc automake libcurl4-openssl-dev zlib1g-dev
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+sudo apt install -y gcc automake libcurl4-openssl-dev zlib1g-dev libncurses5-dev
 
 
 WORK_DIR=/tmp/dotfiles-work/
@@ -22,4 +22,5 @@ ros install sbcl-bin
 ros install ccl-bin
 ros use sbcl/1.4.8
 ros install slim
+ros install cxxxr/lem
 
